@@ -1,124 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoko project</title>
+    <title>Vikrant Sudoko project</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sudoko.css">
-   
+    <link rel="stylesheet" href="sudoku.css">
+
 </head>
+
 <body>
-    <div class="board">
-        <div class="btn_container">
-            <button class="btn_1">Easy</button>
-           <button class="btn_2">Medium</button>
-           <button class="btn_3">Hard</button>
+        <div class="difficulty">
+            <button class="btn btn_1" id="Diff-easy">Easy</button>
+            <button class="btn btn_2" id="Diff-medium">Medium</button>
+            <button class="btn btn_3" id="Diff-hard">Hard</button>
         </div>
-           
-        <table class="table">
-            <tr id="row_1">
-                <td class="cell"          id="c_01">1</td>
-                <td class="cell"          id="c_02"></td>
-                <td class="cell_2"        id="c_03"></td>
-                <td class="cell"          id="c_04"></td>
-                <td class="cell"          id="c_05"></td>
-                <td class="cell_2"        id="c_06"></td>
-                <td class="cell"          id="c_07"></td>
-                <td class="cell"          id="c_08"></td>
-                <td class="cell"          id="c_09"></td>
+        <table class="board" id="actual_sudoku">
+            <tr class="rows01">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="1"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="2"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="3"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="4"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="5"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="6"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="7"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="8"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="9"></td>
             </tr>
-            <tr id="row_2">
-                <td class="cell"          id="c_11"></td>
-                <td class="cell"          id="c_12"></td>
-                <td class="cell_2"        id="c_13"></td>
-                <td class="cell"          id="c_14"></td>
-                <td class="cell"          id="c_15"></td>
-                <td class="cell_2"        id="c_16"></td>
-                <td class="cell"          id="c_17"></td>
-                <td class="cell"          id="c_18"></td>
-                <td class="cell"          id="c_19"></td>
+            <tr class="rows02">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="10"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="11"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="12"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="13"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="14"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="15"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="16"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="17"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="18"></td>
             </tr>
-            <tr id="row_3">
-                <td class="cell"          id="c_21"></td>
-                <td class="cell"          id="c_22"></td>
-                <td class="cell_2"        id="c_23"></td>
-                <td class="cell"          id="c_24"></td>
-                <td class="cell"          id="c_25"></td>
-                <td class="cell_2"        id="c_26"></td>
-                <td class="cell"          id="c_27"></td>
-                <td class="cell"          id="c_28"></td>
-                <td class="cell"          id="c_29"></td>
+            <tr class="rows03">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="19"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="20"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="21"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="22"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="23"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="24"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="25"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="26"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="27"></td>
             </tr>
-            <tr id="row_4">
-                <td class="cell_3"        id="c_31"></td>
-                <td class="cell_3"        id="c_32"></td>
-                <td class="cell_3 cell_2" id="c_33"></td>
-                <td class="cell_3"        id="c_34"></td>
-                <td class="cell_3"        id="c_35"></td>
-                <td class="cell_3 cell_2" id="c_36"></td>
-                <td class="cell_3"        id="c_37"></td>
-                <td class="cell_3"        id="c_38"></td>
-                <td class="cell_3"        id="c_39"></td>
+            <tr class="rows04">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="28"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="29"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="30"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="31"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="32"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="33"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="34"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="35"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="36"></td>
             </tr>
-            <tr id="row_5"> 
-                <td class="cell"          id="c_41"></td>
-                <td class="cell"          id="c_42"></td>
-                <td class="cell cell_2"   id="c_43"></td>
-                <td class="cell"          id="c_44"></td>
-                <td class="cell"          id="c_45"></td>
-                <td class="cell cell_2"   id="c_46"></td>
-                <td class="cell"          id="c_47"></td>
-                <td class="cell"          id="c_48"></td>
-                <td class="cell"          id="c_49"></td>
-            </tr >
-            <tr id="row_6">
-                <td class="cell"          id="c_51" ></td>
-                <td class="cell"          id="c_52" ></td>
-                <td class="cell cell_2"   id="c_53" ></td>
-                <td class="cell"          id="c_54" ></td>
-                <td class="cell"          id="c_55" ></td>
-                <td class="cell cell_2"   id="c_56" ></td>
-                <td class="cell"          id="c_57" ></td>
-                <td class="cell"          id="c_58" ></td>
-                <td class="cell"          id="c_59" ></td>
+            <tr class="rows05">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="37"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="38"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="39"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="40"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="41"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="42"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="43"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="44"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="45"></td>
             </tr>
-            <tr id="row_7">
-                <td class="cell_3"        id="c_61"></td>
-                <td class="cell_3"        id="c_62"></td>
-                <td class="cell_3 cell_2" id="c_63"></td>
-                <td class="cell_3"        id="c_64"></td>
-                <td class="cell_3"        id="c_65"></td>
-                <td class="cell_3 cell_2" id="c_66"></td>
-                <td class="cell_3"        id="c_67"></td>
-                <td class="cell_3"        id="c_68"></td>
-                <td class="cell_3"        id="c_69"></td>
+            <tr class="rows06">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="46"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="47"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="48"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="49"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="50"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="51"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="52"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="53"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="54"></td>
             </tr>
-            <tr id="row_8">
-                <td class="cell"          id="c_71"></td>
-                <td class="cell"          id="c_72"></td>
-                <td class="cell cell_2"   id="c_73"></td>
-                <td class="cell"          id="c_74"></td>
-                <td class="cell"          id="c_75"></td>
-                <td class="cell cell_2"   id="c_76"></td>
-                <td class="cell"          id="c_77"></td>
-                <td class="cell"          id="c_78"></td>
-                <td class="cell"          id="c_79"></td>
+            <tr class="rows07">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="55"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="56"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="57"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="58"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="59"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="60"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="61"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="62"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="63"></td>
             </tr>
-              <tr id="row_9">
-                <td class="cell"          id="c_81"></td>
-                <td class="cell"          id="c_82"></td>
-                <td class="cell cell_2"   id="c_83"></td>
-                <td class="cell"          id="c_84"></td>
-                <td class="cell"          id="c_85"></td>
-                <td class="cell cell_2"   id="c_86"></td>
-                <td class="cell"          id="c_87"></td>
-                <td class="cell"          id="c_88"></td>
-                <td class="cell"          id="c_89"></td>
-              </tr>
+            <tr class="rows08">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="64"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="65"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="66"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="67"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="68"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="69"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="70"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="71"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="72"></td>
+            </tr>
+            <tr class="rows09">
+            <td class="cells column-1"><input type="text" class="input-cell" maxlength="1" id="73"></td>
+            <td class="cells column-2"><input type="text" class="input-cell" maxlength="1" id="74"></td>
+            <td class="cells column-3"><input type="text" class="input-cell" maxlength="1" id="75"></td>
+            <td class="cells column-4"><input type="text" class="input-cell" maxlength="1" id="76"></td>
+            <td class="cells column-5"><input type="text" class="input-cell" maxlength="1" id="77"></td>
+            <td class="cells column-6"><input type="text" class="input-cell" maxlength="1" id="78"></td>
+            <td class="cells column-7"><input type="text" class="input-cell" maxlength="1" id="79"></td>
+            <td class="cells column-8"><input type="text" class="input-cell" maxlength="1" id="80"></td>
+            <td class="cells column-9"><input type="text" class="input-cell" maxlength="1" id="81"></td>
+            </tr>
         </table>
     </div>
-    
+    <button class="validate btn" id="valid">Validate</button>
 </body>
+<script src="sudoku.js"></script>
 </html>

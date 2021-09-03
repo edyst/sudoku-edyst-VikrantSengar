@@ -1,49 +1,77 @@
-
-.btn_container{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-
-}
-.btn_1, .btn_2 ,.btn_3 {
- margin: auto;
- font-size: 25px;
- padding:0px 10px 0px 10px;
- cursor: pointer;
-
-} 
-
-.table {
-width: 50% ; 
-border-collapse: collapse;
-font-family: 'Source Sans Pro', sans-serif;
-font-size: 25px;
-margin: auto;
-border: 2px solid #344861;
-
-
-
-}
-.cell {
-   height: 60px;
-   width: 60px;
-   text-align: center;
-   color: #344861;
-   border:1px solid #bec6d4;
-}
-    
-
-.cell_3 {
-    border-top: 2px solid #344861;
-    border-left: 1px solid #bec6d4;
-    text-align: center;
-    height: 60px;
-    width: 60px;
-}
-.cell_2
-{
-    border-right: 2px solid #344861;
-    border-bottom: 1px solid #bec6d4;
-    
+* {
+  font-family: sans-serif; /*"Source Sans Pro",*/
+  font-size: 25px;
 }
 
+.difficulty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.validate {
+  margin-top: 15px;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+tbody {
+  border: 2px solid #344861;
+  background-color: whitesmoke;
+  padding: 0px;
+}
+.cells {
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid #bec6d4;
+  padding: 0px;
+}
+.input-cell {
+  border: none;
+  outline: none;
+  caret-color: transparent;
+  height: inherit;
+  width: inherit;
+  text-align: center;
+  padding: 0px;
+  font-weight: 500;
+}
+.input-cell:hover {
+  background-color: rgb(128, 183, 245);
+}
+.rows03,
+.rows06 {
+  border-bottom: 2px solid #344861;
+}
+.column-3,
+.column-6 {
+  border-right: 2px solid #344861;
+}
+.same {
+  background-color: cornflowerblue;
+}
+.predefined {
+  background-color: yellowgreen;
+}
+.bad {
+  color: red;
+}
+
+.prefilled-highlight {
+  background-color: yellow;
+}
+.highlighted {
+  background-color: rgb(144, 144, 250);
+}
+.current {
+  background-color: rgb(241, 212, 195);
+}
